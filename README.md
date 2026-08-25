@@ -1,5 +1,7 @@
 # Stream-Length Conditioning for Cardinality Sketches — Reproducibility Artifact
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20881476.svg)](https://doi.org/10.5281/zenodo.20881476)
+
 Reproducibility package for the PVLDB paper *When Is the Free Counter Worth It? A
 Value-Window Study of Stream-Length Conditioning for Cardinality Sketches*
 (Experiment, Analysis & Benchmark).

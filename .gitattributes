@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.pdf binary
+*.png binary
+*.npz binary
+*.gz binary
+*.jar binary
+*.class binary
