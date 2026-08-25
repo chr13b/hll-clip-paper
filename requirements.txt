@@ -1,0 +1,13 @@
+# Pinned dependencies (versions used for the logged results, 2026-06-12/13).
+# Python 3.8.10, numpy 1.23.5.
+numpy==1.23.5
+scipy==1.10.0
+xxhash==3.2.0
+mmh3==5.0.1
+datasketch==1.7.0        # HLL++ empirical bias-correction tables (exp2/exp4)
+datasketches==4.1.0      # Apache DataSketches production HLL/CPC bindings (exp3, exp5)
+matplotlib==3.6.0        # figure generation (paper/make_figures.py)
+# exp6 (UltraLogLog) additionally needs a JDK + hash4j 0.30.0 (Java); phase1/ull/
+# setup_ull.sh fetches a portable Temurin JDK 17 and the jar automatically.
+duckdb==0.10.3
+psycopg2-binary==2.9.10   # phase2/ only: PostgreSQL catalogue injection (paper Table 4)

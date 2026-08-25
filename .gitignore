@@ -1,0 +1,28 @@
+__pycache__/
+*.pyc
+# per-trial arrays are ignored EXCEPT the 18 canonical ones behind the pooled tables and CIs
+phase1/*.npz
+!phase1/exp[1-6]_seed*.npz
+phase1/data/
+phase1/realworld_data/
+phase1/_smoke/
+phase1/*.log
+phase1/ull/jdk/
+phase1/ull/*.tar.gz
+phase1/ull/*.jar
+phase1/ull/*.class
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/ting_kdd_paper.pdf
+# phase2 now holds the exp16 reproducibility subset (scripts, captures,
+# results); only internal planning docs stay out:
+phase2/PLAN.md
+phase2/KICKOFF.md
+phase2/RESULTS_PHASE2.md
+phase2/FOLD_IN.md
+phase2/capture_sf1_resampling_instrument/
+phase2/*.partial.jsonl

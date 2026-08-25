@@ -1,0 +1,111 @@
+{
+  "params": {
+    "lg_k": 12,
+    "n_each": 20000,
+    "T": 200,
+    "sigma": 0.015715693031048028
+  },
+  "cells": [
+    {
+      "overlap_frac": 0.0,
+      "n_union": 40000,
+      "L": 40000,
+      "d_union": 1.0,
+      "a": 0.0,
+      "beta": 0.0010100164067646787,
+      "sigma_measured": 0.014035222583657801,
+      "rmse_raw": 0.014071517548393699,
+      "rmse_clip": 0.009012591117790342,
+      "gain_pct": 35.95153410572157,
+      "gain_pred_pct": 29.28932188134524,
+      "clip_worse_than_raw": false
+    },
+    {
+      "overlap_frac": 0.005,
+      "n_union": 39900,
+      "L": 40000,
+      "d_union": 1.0025062656641603,
+      "a": 0.15947535111617095,
+      "beta": 0.0010682772936656322,
+      "sigma_measured": 0.014081522826980313,
+      "rmse_raw": 0.014121986457397883,
+      "rmse_clip": 0.009182670077628777,
+      "gain_pct": 34.976073618747996,
+      "gain_pred_pct": 28.47096864617994,
+      "clip_worse_than_raw": false
+    },
+    {
+      "overlap_frac": 0.01,
+      "n_union": 39800,
+      "L": 40000,
+      "d_union": 1.0050251256281406,
+      "a": 0.31975208590629395,
+      "beta": 0.0011425673050725984,
+      "sigma_measured": 0.014178430909602045,
+      "rmse_raw": 0.014224393242067639,
+      "rmse_clip": 0.009603305374438062,
+      "gain_pct": 32.487064924238986,
+      "gain_pred_pct": 26.344460974984408,
+      "clip_worse_than_raw": false
+    },
+    {
+      "overlap_frac": 0.02,
+      "n_union": 39600,
+      "L": 40000,
+      "d_union": 1.0101010101010102,
+      "a": 0.642733990862162,
+      "beta": 0.0010792239394240143,
+      "sigma_measured": 0.014126832801429763,
+      "rmse_raw": 0.014167996658348624,
+      "rmse_clip": 0.010734497339209878,
+      "gain_pct": 24.234190633546802,
+      "gain_pred_pct": 20.079485342640236,
+      "clip_worse_than_raw": false
+    },
+    {
+      "overlap_frac": 0.05,
+      "n_union": 39000,
+      "L": 40000,
+      "d_union": 1.0256410256410255,
+      "a": 1.6315555152654717,
+      "beta": 0.0008939028892982522,
+      "sigma_measured": 0.014170951600744839,
+      "rmse_raw": 0.014199117284047923,
+      "rmse_clip": 0.013602886131895659,
+      "gain_pct": 4.1990719579596885,
+      "gain_pred_pct": 4.42669924438942,
+      "clip_worse_than_raw": false
+    },
+    {
+      "overlap_frac": 0.1,
+      "n_union": 38000,
+      "L": 40000,
+      "d_union": 1.0526315789473684,
+      "a": 3.348982373439661,
+      "beta": 0.0005588820953245302,
+      "sigma_measured": 0.014365387249105,
+      "rmse_raw": 0.014376254728308861,
+      "rmse_clip": 0.014376254728308861,
+      "gain_pct": 0.0,
+      "gain_pred_pct": 0.037958547686300914,
+      "clip_worse_than_raw": false
+    },
+    {
+      "overlap_frac": 0.2,
+      "n_union": 36000,
+      "L": 40000,
+      "d_union": 1.1111111111111112,
+      "a": 7.07007389948374,
+      "beta": 0.00027010618552230395,
+      "sigma_measured": 0.014541702555304997,
+      "rmse_raw": 0.014544210895006345,
+      "rmse_clip": 0.014544210895006345,
+      "gain_pct": 0.0,
+      "gain_pred_pct": 7.601697049608447e-11,
+      "clip_worse_than_raw": false
+    }
+  ],
+  "rms_dev_points": 4.499966298148621,
+  "any_worse": false,
+  "note": "merged L = L1+L2 ; overlap fraction replaces duplicate fraction"
+}

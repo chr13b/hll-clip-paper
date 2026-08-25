@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the associated paper and this software."
+title: "Stream-length clip for cardinality sketches: reproducibility artifact"
+type: software
+authors:
+  - family-names: Bertsch
+    given-names: Christian
+    orcid: "https://orcid.org/0009-0007-5008-9874"
+    affiliation: "ETH Zurich"
+repository-code: "https://github.com/chr13b/hll-clip-paper"
+license: CC-BY-4.0
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20881476"
+    description: "Concept DOI (always resolves to the latest version)"
+  - type: doi
+    value: "10.5281/zenodo.20881477"
+    description: "Version v1.0"

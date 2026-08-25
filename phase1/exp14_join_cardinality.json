@@ -1,0 +1,91 @@
+{
+  "params": {
+    "lg_k": 14,
+    "sf": 0.3,
+    "draws": 200,
+    "estimator": "|R||S|/max(NDV_R,NDV_S)"
+  },
+  "cells": [
+    {
+      "pk": "customer.c_custkey",
+      "fk": "orders.o_custkey",
+      "rows_pk": 45000,
+      "rows_fk": 450000,
+      "true_join": 450000,
+      "ndv_pk_exact": 45000,
+      "ndv_fk_exact": 29998,
+      "join_est_exact_ndv": 450000.0,
+      "rel_rmse_join_raw": 0.005481887715406275,
+      "rel_rmse_join_clip": 0.00395058346727878,
+      "rel_rmse_join_ri": 0.00395058346727878,
+      "join_gain_pct": 27.933885690944095,
+      "join_gain_ri_pct": 27.933885690944095,
+      "join_gain_ci": [
+        20.923852389093422,
+        36.32645254292276
+      ],
+      "join_gain_ri_ci": [
+        20.668909481389104,
+        36.74385849293406
+      ],
+      "impossible_ndv_rate": 0.5,
+      "impossible_ndv_rate_fk": 0.0,
+      "clip_ever_worse": false,
+      "draws": 200
+    },
+    {
+      "pk": "orders.o_orderkey",
+      "fk": "lineitem.l_orderkey",
+      "rows_pk": 450000,
+      "rows_fk": 1800093,
+      "true_join": 1800093,
+      "ndv_pk_exact": 450000,
+      "ndv_fk_exact": 450000,
+      "join_est_exact_ndv": 1800093.0,
+      "rel_rmse_join_raw": 0.006074858576843287,
+      "rel_rmse_join_clip": 0.006074858576843287,
+      "rel_rmse_join_ri": 0.004309340398095411,
+      "join_gain_pct": 0.0,
+      "join_gain_ri_pct": 29.062704199861432,
+      "join_gain_ci": [
+        0.0,
+        0.0
+      ],
+      "join_gain_ri_ci": [
+        21.081050610702466,
+        37.985417832807734
+      ],
+      "impossible_ndv_rate": 0.495,
+      "impossible_ndv_rate_fk": 0.0,
+      "clip_ever_worse": false,
+      "draws": 200
+    },
+    {
+      "pk": "part.p_partkey",
+      "fk": "lineitem.l_partkey",
+      "rows_pk": 60000,
+      "rows_fk": 1800093,
+      "true_join": 1800093,
+      "ndv_pk_exact": 60000,
+      "ndv_fk_exact": 60000,
+      "join_est_exact_ndv": 1800093.0,
+      "rel_rmse_join_raw": 0.006034149929213299,
+      "rel_rmse_join_clip": 0.005302019854355465,
+      "rel_rmse_join_ri": 0.0029483652825455574,
+      "join_gain_pct": 12.133110437202642,
+      "join_gain_ri_pct": 51.13868039188827,
+      "join_gain_ci": [
+        8.100596184238935,
+        16.354941476837386
+      ],
+      "join_gain_ri_ci": [
+        43.0167734203176,
+        59.659574678293495
+      ],
+      "impossible_ndv_rate": 0.47,
+      "impossible_ndv_rate_fk": 0.0,
+      "clip_ever_worse": false,
+      "draws": 200
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "plain": [
+    {
+      "lgk": 11,
+      "bytes": 1128,
+      "rmse": 0.01918012477041603
+    },
+    {
+      "lgk": 12,
+      "bytes": 2216,
+      "rmse": 0.012799756439139094
+    },
+    {
+      "lgk": 13,
+      "bytes": 4264,
+      "rmse": 0.007615144599863384
+    },
+    {
+      "lgk": 14,
+      "bytes": 8488,
+      "rmse": 0.005002842056473525
+    },
+    {
+      "lgk": 15,
+      "bytes": 16936,
+      "rmse": 0.003433787208796571
+    }
+  ],
+  "refined": [
+    {
+      "mgk": 16,
+      "bytes": 2408,
+      "rmse": 0.010998631935428316,
+      "Dhat_over_D": 0.9843828125
+    },
+    {
+      "mgk": 64,
+      "bytes": 2984,
+      "rmse": 0.010784704846554862,
+      "Dhat_over_D": 0.9961015625
+    },
+    {
+      "mgk": 256,
+      "bytes": 5288,
+      "rmse": 0.00869637861446008,
+      "Dhat_over_D": 0.99903125
+    },
+    {
+      "mgk": 1024,
+      "bytes": 14504,
+      "rmse": 0.008323971102584583,
+      "Dhat_over_D": 0.9997578125000002
+    }
+  ],
+  "params": {
+    "n": 32000,
+    "d": 5.0,
+    "h": 1,
+    "L": 160000,
+    "ref_lgk": 12,
+    "T_plain": 200,
+    "T_ref": 60,
+    "mg_bytes_per_counter": 12
+  },
+  "ref_rmse_floor": 0.008323971102584583,
+  "window_hi_bytes": 2984,
+  "plain_overtakes_at_bytes": 4264,
+  "note": "h=1,d=5 heavy-tailed; HLL bytes = max updatable (dense) size; MG bytes = mg_k*12"
+}
