@@ -27,6 +27,9 @@ plt.rcParams.update({
     "font.family": "serif", "font.size": 10, "axes.spines.top": False,
     "axes.spines.right": False, "figure.dpi": 150, "axes.grid": True,
     "grid.alpha": 0.25, "grid.linewidth": 0.5, "legend.frameon": False,
+    # embed real (TrueType) fonts, not matplotlib's default Type3 bitmaps, so the
+    # figures pass ACM's camera-ready font check and PDF/A validation
+    "pdf.fonttype": 42, "ps.fonttype": 42,
 })
 phi, Phi, Phibar = norm.pdf, norm.cdf, norm.sf
 C = {"blue": "#2b6cb0", "red": "#c53030", "green": "#2f855a",
