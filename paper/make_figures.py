@@ -316,10 +316,10 @@ def fig_dbcolumns():
             y = [r["gain_pct"] for r in pts]
             ax.plot(x, y, color=colr, lw=1.0, ls="--", alpha=0.75, zorder=4)
             # (bootstrap CIs are reported per point in the text, not drawn here)
+            # no legend row: the caption already explains these open "duplicate
+            # injection" markers, and dropping the long label keeps the box small
             ax.scatter(x, y, s=22, marker=mk, facecolor="none", edgecolor=colr,
-                       linewidth=1.1, zorder=5,
-                       label="same keys, +duplicates"
-                       if col == sorted({r["column"] for r in rows})[0] else None)
+                       linewidth=1.1, zorder=5)
 
     # (the four key columns at a=0 are named in the caption; no label needed here)
     ax.annotate(f"{len(other)} non-key columns,\nall exactly $0.0\\%$",
@@ -327,15 +327,15 @@ def fig_dbcolumns():
 
     ax.set_xscale("symlog", linthresh=1, linscale=0.9)
     ax.set_xlim(-0.12, 4e4)
-    ax.set_ylim(-3, 46)
+    ax.set_ylim(-3, 38)
     ax.set_xlabel(r"standardized duplication $a=(d-1)/\sigma$")
     ax.set_ylabel("RMSE reduction (%)")
     ax.set_title("Database columns fall on the same curve", fontsize=9.5)
-    # compact box pinned into the empty upper-right corner so it clears the
-    # descending curve (its left edge otherwise sat on the a~1 knee)
-    ax.legend(fontsize=6.0, loc="upper right", framealpha=0.92,
-              markerscale=0.9, handlelength=1.3, handletextpad=0.5,
-              borderaxespad=0.35, labelspacing=0.3, borderpad=0.35)
+    # four short entries -> a small box that tucks into the top-right corner
+    # with clear air between it and the descending curve
+    ax.legend(fontsize=6.3, loc="upper right", framealpha=0.92,
+              handlelength=1.4, handletextpad=0.5, borderaxespad=0.6,
+              labelspacing=0.3)
     save(fig, "fig7_dbcolumns")
 
 
