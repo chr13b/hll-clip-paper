@@ -123,7 +123,11 @@ def fig_collapse():
     ax.axhline(0, color="0.75", lw=0.7, zorder=1)
     ax.annotate("$L$ alone is exact at $a{=}0$\nbut unbounded beyond",
                 xy=(1.30, -6.5), fontsize=6.6, color=C["gray"], ha="left", va="center")
-    ax.legend(fontsize=7.2, ncol=1, loc="upper right")
+    # smaller box tucked into the clear upper-right corner so it stops crowding
+    # the a~1 data cluster and the descending curve
+    ax.legend(fontsize=5.6, ncol=1, loc="upper right", framealpha=0.9,
+              handlelength=1.3, handletextpad=0.45, borderaxespad=0.5,
+              labelspacing=0.25, borderpad=0.32)
     save(fig, "fig2_collapse")
 
 
@@ -316,10 +320,10 @@ def fig_dbcolumns():
             y = [r["gain_pct"] for r in pts]
             ax.plot(x, y, color=colr, lw=1.0, ls="--", alpha=0.75, zorder=4)
             # (bootstrap CIs are reported per point in the text, not drawn here)
-            # no legend row: the caption already explains these open "duplicate
-            # injection" markers, and dropping the long label keeps the box small
             ax.scatter(x, y, s=22, marker=mk, facecolor="none", edgecolor=colr,
-                       linewidth=1.1, zorder=5)
+                       linewidth=1.1, zorder=5,
+                       label="same keys, added duplicates"
+                       if col == sorted({r["column"] for r in rows})[0] else None)
 
     # (the four key columns at a=0 are named in the caption; no label needed here)
     ax.annotate(f"{len(other)} non-key columns,\nall exactly $0.0\\%$",
@@ -331,11 +335,7 @@ def fig_dbcolumns():
     ax.set_xlabel(r"standardized duplication $a=(d-1)/\sigma$")
     ax.set_ylabel("RMSE reduction (%)")
     ax.set_title("Database columns fall on the same curve", fontsize=9.5)
-    # four short entries -> a small box that tucks into the top-right corner
-    # with clear air between it and the descending curve
-    ax.legend(fontsize=6.3, loc="upper right", framealpha=0.92,
-              handlelength=1.4, handletextpad=0.5, borderaxespad=0.6,
-              labelspacing=0.3)
+    ax.legend(fontsize=6.8, loc="upper right", framealpha=0.9)
     save(fig, "fig7_dbcolumns")
 
 
