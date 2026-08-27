@@ -133,13 +133,15 @@ def fig_window():
     arm = "xxh64-ints"
     ms = sorted({c["m"] for c in cells if c["arm"] == arm})
     cols = {256: C["blue"], 1024: C["green"], 4096: C["orange"], 16384: C["purple"]}
+    styles = {256: ("-", "o"), 1024: ("--", "s"), 4096: ("-.", "^"), 16384: (":", "D")}
     fig, ax = plt.subplots(figsize=(3.4, 2.7))
     for m in ms:
         pts = [(100 * (c["d"] - 1), c["dclip"]) for c in cells
                if c["arm"] == arm and c["m"] == m]
         pts.sort()
         xs, ys = zip(*pts)
-        ax.plot(xs, ys, marker="o", ms=3, lw=1.3, color=cols[m], label=f"$m={m}$")
+        ls, mk = styles[m]
+        ax.plot(xs, ys, marker=mk, ms=3.5, lw=1.3, ls=ls, color=cols[m], label=f"$m={m}$")
     ax.axhline(5, color=C["gray"], ls=":", lw=1.0)
     ax.text(13, 6.2, "5% gain", fontsize=7.5, color=C["gray"])
     ax.set_xlabel("duplicate fraction $(d-1)$ (%)")
@@ -193,7 +195,7 @@ def fig_universality():
     ax.text(len(bars) - 0.5, 34.0, r"theory $\approx 29.3\%$", fontsize=7.5,
             ha="right", color="k")
     ax.set_xticks(xs)
-    ax.set_xticklabels([b[0] for b in bars], fontsize=8)
+    ax.set_xticklabels([b[0] for b in bars], fontsize=7)
     ax.set_ylabel("RMSE reduction at $d{=}1$ (%)")
     ax.set_title("Gain is universal across sketch families", fontsize=9.5)
     ax.set_ylim(0, 38)
