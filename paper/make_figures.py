@@ -318,7 +318,7 @@ def fig_dbcolumns():
             # (bootstrap CIs are reported per point in the text, not drawn here)
             ax.scatter(x, y, s=22, marker=mk, facecolor="none", edgecolor=colr,
                        linewidth=1.1, zorder=5,
-                       label="same keys, added duplicates"
+                       label="same keys, +duplicates"
                        if col == sorted({r["column"] for r in rows})[0] else None)
 
     # (the four key columns at a=0 are named in the caption; no label needed here)
@@ -327,11 +327,15 @@ def fig_dbcolumns():
 
     ax.set_xscale("symlog", linthresh=1, linscale=0.9)
     ax.set_xlim(-0.12, 4e4)
-    ax.set_ylim(-3, 38)
+    ax.set_ylim(-3, 46)
     ax.set_xlabel(r"standardized duplication $a=(d-1)/\sigma$")
     ax.set_ylabel("RMSE reduction (%)")
     ax.set_title("Database columns fall on the same curve", fontsize=9.5)
-    ax.legend(fontsize=6.8, loc="upper right", framealpha=0.9)
+    # compact box pinned into the empty upper-right corner so it clears the
+    # descending curve (its left edge otherwise sat on the a~1 knee)
+    ax.legend(fontsize=6.0, loc="upper right", framealpha=0.92,
+              markerscale=0.9, handlelength=1.3, handletextpad=0.5,
+              borderaxespad=0.35, labelspacing=0.3, borderpad=0.35)
     save(fig, "fig7_dbcolumns")
 
 
